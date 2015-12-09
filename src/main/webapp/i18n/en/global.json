@@ -6,6 +6,9 @@
             "home": "Home",
             "entities": {
                 "main": "Entities",
+                "bankAccount": "BankAccount",
+                "trade": "Trade",
+                "transfer": "Transfer",
                 "additionalEntity": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

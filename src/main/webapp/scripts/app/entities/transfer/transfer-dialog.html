@@ -1,0 +1,62 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myTransferLabel" translate="bankApp.transfer.home.createOrEditLabel">Create or edit a Transfer</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="transfer.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="bankApp.transfer.creationDate" for="field_creationDate">CreationDate</label>
+            <input type="datetime-local" class="form-control" name="creationDate" id="field_creationDate"
+                    ng-model="transfer.creationDate"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="bankApp.transfer.amount" for="field_amount">Amount</label>
+            <input type="number" class="form-control" name="amount" id="field_amount"
+                    ng-model="transfer.amount"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="bankApp.transfer.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="transfer.description"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="bankApp.transfer.toBankAccount" for="field_toBankAccount">toBankAccount</label>
+            <select class="form-control" id="field_toBankAccount" name="toBankAccount" ng-model="transfer.toBankAccountId" ng-options="bankAccount.id as bankAccount.name for bankAccount in bankaccounts">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="bankApp.transfer.fromBankAccount" for="field_fromBankAccount">fromBankAccount</label>
+            <select class="form-control" id="field_fromBankAccount" name="fromBankAccount" ng-model="transfer.fromBankAccountId" ng-options="bankAccount.id as bankAccount.name for bankAccount in bankaccounts">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="bankApp.transfer.trade" for="field_trade">trade</label>
+            <select class="form-control" id="field_trade" name="trade" ng-model="transfer.tradeId" ng-options="trade.id as trade.name for trade in trades | orderBy:'id'">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

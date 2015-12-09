@@ -1,0 +1,42 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "incomingTransfers",
+            "otherEntityName": "transfer",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "toBankAccount"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "outgoingTransfer",
+            "otherEntityName": "transfer",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "fromBankAccount"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "owner",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "login"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "balance",
+            "fieldType": "BigDecimal",
+            "fieldValidateRules": []
+        }
+    ],
+    "changelogDate": "20151209230306",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll"
+}

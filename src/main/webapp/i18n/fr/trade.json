@@ -1,0 +1,23 @@
+{
+    "bankApp": {
+        "trade" : {
+            "home": {
+                "title": "Trades",
+                "createLabel": "Créer un nouveau Trade",
+                "createOrEditLabel": "Créer ou éditer un Trade"
+            },
+            "created": "Un nouveau Trade a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Trade avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Trade avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Trade {{ id }} ?"
+            },
+            "detail": {
+                "title": "Trade"
+            },
+            "name": "Name",
+            "transfer": "Transfer"
+        }
+    }
+}
+

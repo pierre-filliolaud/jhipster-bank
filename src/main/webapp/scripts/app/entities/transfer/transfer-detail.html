@@ -1,0 +1,70 @@
+
+<div>
+    <h2><span translate="bankApp.transfer.detail.title">Transfer</span> {{transfer.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="bankApp.transfer.creationDate">CreationDate</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{transfer.creationDate | date:'medium'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="bankApp.transfer.amount">Amount</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{transfer.amount}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="bankApp.transfer.description">Description</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{transfer.description}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="bankApp.transfer.toBankAccount">toBankAccount</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="bankAccount.detail({id:transfer.toBankAccountId})">{{transfer.toBankAccountName}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="bankApp.transfer.fromBankAccount">fromBankAccount</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="bankAccount.detail({id:transfer.fromBankAccountId})">{{transfer.fromBankAccountName}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="bankApp.transfer.trade">trade</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="trade.detail({id:transfer.tradeId})">{{transfer.tradeName}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

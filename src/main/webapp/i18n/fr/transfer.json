@@ -1,0 +1,27 @@
+{
+    "bankApp": {
+        "transfer" : {
+            "home": {
+                "title": "Transfers",
+                "createLabel": "Créer un nouveau Transfer",
+                "createOrEditLabel": "Créer ou éditer un Transfer"
+            },
+            "created": "Un nouveau Transfer a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Transfer avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Transfer avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Transfer {{ id }} ?"
+            },
+            "detail": {
+                "title": "Transfer"
+            },
+            "creationDate": "CreationDate",
+            "amount": "Amount",
+            "description": "Description",
+            "toBankAccount": "ToBankAccount",
+            "fromBankAccount": "FromBankAccount",
+            "trade": "Trade"
+        }
+    }
+}
+
